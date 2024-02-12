@@ -24,4 +24,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: php8.2:$(date +%s)
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
