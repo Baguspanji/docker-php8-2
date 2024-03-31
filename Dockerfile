@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Install dependencies
 RUN apt-get update
-RUN apt-get install -y software-properties-common curl nginx supervisor vim zip unzip
+RUN apt-get install -y software-properties-common curl nginx supervisor vim zip unzip wget
 RUN add-apt-repository -y ppa:ondrej/php
 RUN apt-get update
 RUN apt-get install -y php8.2 \
