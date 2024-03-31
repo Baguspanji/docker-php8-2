@@ -4,8 +4,9 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Install dependencies
 RUN apt-get update
-RUN apt-get install -y software-properties-common curl nginx supervisor vim zip unzip wget xvfb openssl xorg libssl1.0-dev
-RUN add-apt-repository -y ppa:ondrej/php
+RUN apt-get install -y software-properties-common curl nginx supervisor vim zip unzip
+RUN apt-get install -y xvfb
+RUN apt-get install -y openssl build-essential xorg libssl1.0-dev
 RUN apt-get update
 RUN apt-get install -y php8.2 \
     php8.2-fpm \
