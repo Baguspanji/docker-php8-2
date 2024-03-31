@@ -6,6 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update
 RUN apt-get install -y software-properties-common curl nginx supervisor vim zip unzip
 RUN apt-get install -y wkhtmltopdf wget
+RUN add-apt-repository -y ppa:ondrej/php
 RUN apt-get update
 RUN apt-get install -y php8.2 \
     php8.2-fpm \
